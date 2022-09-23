@@ -12,7 +12,8 @@ const getWeatherDetails = (latitude, longitude, callback) => {
             callback(undefined, {
                 temperature: body.current.temperature,
                 chanceOfRain: body.current.feelslike,
-                weatherDescription: body.current.weather_descriptions[0]
+                weatherDescription: body.current.weather_descriptions[0],
+                windSpeed: body.current.wind_speed
             })
         }
     })
